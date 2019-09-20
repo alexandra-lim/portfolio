@@ -1,0 +1,58 @@
+// header
+
+header {
+	// background: $secondaryBackground;
+	text-align: center;
+	color: $textColour;
+}
+
+h1 {
+	font-size: calc(5.2rem + (64 - 52) * ((100vw - 320px) / (1600 - 320)));
+	font-family: $headingFont;
+	line-height: 1.2;
+	// text-transform: lowercase;
+	letter-spacing: 0.12rem;
+	margin-bottom: 0;
+	// text-align: center;
+}
+
+h2 {
+	font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
+	font-family: $headingFont;
+	margin-top: 2.5rem;
+	letter-spacing: 0.12rem;
+	// text-transform: lowercase;
+	line-height: 1.2;
+}
+
+.headerText {
+	position: relative;
+}
+
+.headerText::after {
+	content: "";
+	@include imageBorder;
+	position: absolute;
+	padding: 100px;
+	top: -20%;
+	left: 20%;
+	z-index: -1;
+	// z-index: -10;
+}
+
+// nav
+
+header nav ul {
+	@include removeListStyles;
+	@include flex(row, space-between);
+
+	li {
+		width: 20%;
+		text-align: center;
+		font-family: $headingFont;
+
+		a {
+			@include linkDecoration;
+		}
+	}
+}

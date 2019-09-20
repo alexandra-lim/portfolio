@@ -1,0 +1,58 @@
+// fonts
+$headingFont: "Playfair Display", serif;
+$baseFont: "Raleway", sans-serif;
+
+// colours
+$textColour: #1c454a;
+$background: #f5f0e3;
+$yellow: #f7ae2e;
+$secondaryBackground: #f9b09d;
+$red: #e3492b;
+
+// media queries
+@mixin forSize($size) {
+	@if $size == mobileTablet {
+		@media (min-width: 480px) {
+			@content;
+		}
+	} @else if $size == portraitTablet {
+		@media (min-width: 700px) {
+			@content;
+		}
+	} @else if $size == smallDesktop {
+		@media (min-width: 900px) {
+			@content;
+		}
+	} @else if $size == desktopBigger {
+		@media (min-width: 1200px) {
+			@content;
+		}
+	}
+}
+
+// ul mixin
+@mixin removeListStyles {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+// flexbox mixin
+@mixin flex($flexDirection, $justify) {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: $flexDirection;
+	justify-content: $justify;
+}
+
+// link mixin
+@mixin linkDecoration {
+	text-decoration: none;
+}
+
+// image border
+@mixin imageBorder {
+	border: 10px solid transparent;
+	border-image: url("https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80");
+	border-image-slice: 5;
+}
