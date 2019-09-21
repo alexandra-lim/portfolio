@@ -4,10 +4,10 @@ $baseFont: "Raleway", sans-serif;
 
 // colours
 $textColour: #1c454a;
-$background: #f5f0e3;
+$background: #f9f7f0;
 $yellow: #f7ae2e;
 $secondaryBackground: #f9b09d;
-$red: #e3492b;
+$subheadingColour: #e3492b;
 
 // media queries
 @mixin forSize($size) {
@@ -51,8 +51,8 @@ $red: #e3492b;
 }
 
 // image border
-@mixin imageBorder {
+@mixin imageBorder($imageLink) {
 	border: 10px solid transparent;
-	border-image: url("https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&auto=format&fit=crop&w=1651&q=80");
-	border-image-slice: 5;
+	border-image: url($imageLink);
+    border-image-slice: 20;
 }

@@ -2,8 +2,35 @@ html {
     font-size: 62.5%;
 }
 
+body {
+    background: $background;
+    font-family: $baseFont;
+}
+
 .wrapper {
 	width: 85%;
 	max-width: 1200px;
-	margin: 0 auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    font-family: $headingFont;
+    color: $textColour;
+}
+
+section {
+    margin-top: 5rem;
+}
+
+// section headings
+h3 {
+    font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
+    color: $subheadingColour;
+}
+
+// section text 
+p {
+    font-size: calc(1.6rem + (28 - 16) * ((100vw - 320px) / (1600 - 320)));
+    line-height: 1.5;
 }
