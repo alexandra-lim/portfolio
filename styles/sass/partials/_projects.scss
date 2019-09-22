@@ -1,0 +1,73 @@
+// projects
+
+.projects {
+	h3 {
+		margin-top: 0;
+	}
+}
+
+.projectList {
+	@include removeListStyles;
+
+	li {
+		margin-bottom: 5rem;
+	}
+
+	figure {
+		margin: 0 auto;
+		position: relative;
+	}
+}
+
+.projectList {
+	.skillsUsed {
+		font-style: italic;
+        margin-top: 0;
+        text-align: center;
+	}
+
+	.projectDesc {
+		margin-bottom: 3.5rem;
+	}
+}
+
+.projectLinks {
+    text-align: center;
+}
+
+.linkButton, button {
+		margin-right: 1rem;
+		padding: 1rem 2rem;
+		background-color: $secondaryColour;
+		font-size: 1.6rem;
+		font-weight: 700;
+		color: $background;
+		border-radius: 1rem;
+		transition: 0.3s all linear;
+		&:hover,
+		:focus {
+			color: $textColour;
+			background-color: $accentColour;
+		}
+	}
+
+	.linkButton:last-child {
+		margin-right: 0;
+	}
+
+// borders for project screenshots
+.thankfull {
+	@include imageBorder("../assets/projects/thankfullborder.jpg");
+}
+
+.trivial {
+	@include imageBorder("../assets/projects/trivialborder.jpg");
+}
+
+.askRon {
+	@include imageBorder("../assets/projects/askronborder.jpg");
+}
+
+.sanctuary {
+	@include imageBorder("../assets/projects/sanctuaryborder.jpg");
+}

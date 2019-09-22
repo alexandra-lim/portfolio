@@ -1,0 +1,38 @@
+// skills
+
+.skillsIcons {
+	@include removeListStyles;
+	@include flex(row, space-between);
+
+	li {
+		width: 50%;
+        margin-top: 2rem;
+        text-align: center;
+
+		.skillIcon {
+			font-size: 4rem;
+			display: inline-block;
+			// font-size: calc(1.6rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
+		}
+
+		p {
+			margin-top: 1.5rem;
+		}
+	}
+}
+
+.firebaseIcon {
+	width: 2.8rem;
+	margin: 0 auto;
+}
+
+.responsiveIcon {
+	width: 5rem;
+	margin: 0 auto;
+}
+
+.skillsIcons li:last-child {
+	p {
+		margin-top: 0.5rem;
+	}
+}

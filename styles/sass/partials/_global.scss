@@ -1,36 +1,75 @@
 html {
-    font-size: 62.5%;
+	font-size: 62.5%;
 }
 
 body {
-    background: $background;
-    font-family: $baseFont;
+	background: $background;
+	font-family: $baseFont;
+	color: $textColour;
 }
 
 .wrapper {
 	width: 85%;
 	max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+	margin: 0 auto;
 }
 
-h1, h2, h3 {
-    font-family: $headingFont;
-    color: $textColour;
+h1,
+h2,
+h3,
+h4 {
+	font-family: $headingFont;
+	letter-spacing: 0.2rem;
+	text-align: center;
 }
 
 section {
-    margin-top: 5rem;
+	margin-top: 5rem;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1.1;
 }
 
 // section headings
 h3 {
-    font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
-    color: $subheadingColour;
+	font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
+	color: $secondaryColour;
 }
 
-// section text 
-p {
-    font-size: calc(1.6rem + (28 - 16) * ((100vw - 320px) / (1600 - 320)));
-    line-height: 1.5;
+// section text
+p, form {
+	font-size: calc(1.6rem + (28 - 16) * ((100vw - 320px) / (1600 - 320)));
+	line-height: 1.5;
+	margin-bottom: 0;
+}
+
+// project titles
+h4 {
+	font-size: calc(2.4rem + (36 - 24) * ((100vw - 320px) / (1600 - 320)));
+	margin-bottom: 2rem;
+	line-height: 1.2;
+}
+
+// links
+
+a, button {
+	text-decoration: none;
+	font-family: $headingFont;
+	// font-weight: 700;
+    transition: 0.3s all linear;
+    letter-spacing: 0.12rem;
+}
+
+a {
+	color: $textColour;
+	&:hover, :focus {
+		color: $secondaryColour;
+	}
+}
+
+img {
+    display: block;
 }

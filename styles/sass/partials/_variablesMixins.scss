@@ -5,9 +5,9 @@ $baseFont: "Raleway", sans-serif;
 // colours
 $textColour: #1c454a;
 $background: #f9f7f0;
-$yellow: #f7ae2e;
+$accentColour: #f7ae2e;
 $secondaryBackground: #f9b09d;
-$subheadingColour: #e3492b;
+$secondaryColour: #e3492b;
 
 // media queries
 @mixin forSize($size) {
@@ -43,11 +43,6 @@ $subheadingColour: #e3492b;
 	flex-wrap: wrap;
 	flex-direction: $flexDirection;
 	justify-content: $justify;
-}
-
-// link mixin
-@mixin linkDecoration {
-	text-decoration: none;
 }
 
 // image border

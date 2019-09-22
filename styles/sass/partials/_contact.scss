@@ -1,0 +1,49 @@
+// contact me!
+
+// .contact {
+//     p {
+//         text-align: center;
+//     }
+// }
+
+
+form {
+    margin: 0 auto;
+    margin-top: 3rem;
+    // width: 90%;
+}
+
+label, input {
+    margin-bottom: 1rem;
+}
+
+input,
+textarea {
+    border: 1px solid $textColour;
+    background: $background;
+    width: 100%;
+    &::placeholder {
+        color: $textColour;
+    }
+}
+
+textarea {
+	resize: none;
+}
+
+.submitButton {
+    margin-top: 2rem;
+    text-align: center;
+    button {
+        border: none;
+    }
+}
+
+.socialMedia {
+    margin-top: 3rem;
+    .socialIcons {
+        @include removeListStyles;
+        @include flex (row, space-around);
+        font-size: 2rem;
+    }
+}

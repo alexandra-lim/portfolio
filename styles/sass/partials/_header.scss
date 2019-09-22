@@ -9,9 +9,7 @@ header {
 h1 {
 	font-size: calc(5.2rem + (64 - 52) * ((100vw - 320px) / (1600 - 320)));
 	font-family: $headingFont;
-	line-height: 1.1;
 	text-transform: lowercase;
-	letter-spacing: 0.2rem;
 	margin-bottom: 0;
 	margin-top: 10rem;
 }
@@ -20,9 +18,7 @@ h2 {
 	font-size: calc(3.2rem + (48 - 32) * ((100vw - 320px) / (1600 - 320)));
 	font-family: $headingFont;
 	margin-top: 1rem;
-	letter-spacing: 0.2rem;
 	text-transform: lowercase;
-	line-height: 1.1;
 }
 
 .headerText {
@@ -49,11 +45,6 @@ header nav ul {
 	li {
 		width: 20%;
 		text-align: center;
-		font-family: $headingFont;
-
-		a {
-			@include linkDecoration;
-		}
 	}
 }
 
@@ -62,44 +53,5 @@ header nav ul {
 	margin: 0 auto;
 	padding-top: 12rem;
 	font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
-	color: $subheadingColour;
-}
-
-// main
-
-// about me
-
-.profilePic {
-    position: relative;
-    // margin-top: 5rem;
-
-    img {
-    width: 25rem;
-    height: 25rem;
-	object-fit: cover;
-    }
-}
-
-.profilePic::after {
-    content: "";
-    @include imageBorder ("../assets/picborder.jpg");
-    width: 23rem;
-    height: 23rem;
-    position: absolute;
-    top: 2rem;
-    left: 3.25rem;
-    z-index: -1;
-}
-
-.about .profile {
-    margin-top: 5rem;
-    text-align: left;
-}
-
-// skills
-
-.skillsIcons {
-    @include removeListStyles;
-    display: grid;
-    grid-template-columns: 1fr;
+	color: $secondaryColour;
 }
