@@ -41,8 +41,6 @@ section {
 	}
 }
 
-
-
 // section headings
 h3 {
 	font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
@@ -50,7 +48,8 @@ h3 {
 }
 
 // section text
-p, form {
+p,
+form {
 	font-size: calc(1.6rem + (22 - 16) * ((100vw - 320px) / (1600 - 320)));
 	line-height: 1.5;
 	margin-bottom: 0;
@@ -65,20 +64,38 @@ h4 {
 
 // links
 
-a, button {
+a,
+button {
 	text-decoration: none;
-    transition: 0.3s all linear;
-    letter-spacing: 0.12rem;
+	transition: 0.3s all linear;
+	letter-spacing: 0.12rem;
 }
 
 a {
 	color: $textColour;
 	font-weight: 700;
-	&:hover, :focus {
+	&:hover,
+	&:focus {
 		color: $secondaryColour;
 	}
 }
 
 img {
-    display: block;
+	display: block;
+}
+
+// scroll to top
+.backToTop {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	color: $secondaryColour;
+	padding: 1% 1.5%;
+	display: none;
+	transition: all 0.3s linear;
+	font-size: 4rem;
+	&:hover {
+		color: $textColour;
+		text-decoration: none;
+	}
 }

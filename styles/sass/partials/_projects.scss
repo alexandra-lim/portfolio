@@ -29,6 +29,7 @@
 		@include forSize(smallDesktop) {
 			width: calc(50% - 4rem);
 			align-self: center;
+			margin-left: 0;
 		}
 	}
 }
@@ -38,6 +39,7 @@
 		figure {
 			order: 2;
 			margin-left: 4rem;
+			margin-right: 0;
 		}
 	}
 }
@@ -46,6 +48,7 @@
 	@include forSize(smallDesktop) {
 		.projectProfile {
 			margin-left: 4rem;
+			margin-right: 0;
 		}
 	}
 }
@@ -89,7 +92,7 @@
 	}
 
 	&:hover,
-	:focus {
+	&:focus {
 		color: $textColour;
 		background-color: $accentColour;
 	}

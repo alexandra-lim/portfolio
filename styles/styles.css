@@ -235,7 +235,8 @@ h3 {
   color: #e3492b;
 }
 
-p, form {
+p,
+form {
   font-size: calc(1.6rem + (22 - 16) * ((100vw - 320px) / (1600 - 320)));
   line-height: 1.5;
   margin-bottom: 0;
@@ -247,7 +248,8 @@ h4 {
   line-height: 1.2;
 }
 
-a, button {
+a,
+button {
   text-decoration: none;
   -webkit-transition: 0.3s all linear;
   transition: 0.3s all linear;
@@ -259,12 +261,29 @@ a {
   font-weight: 700;
 }
 
-a:hover, a :focus {
+a:hover, a:focus {
   color: #e3492b;
 }
 
 img {
   display: block;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  color: #e3492b;
+  padding: 1% 1.5%;
+  display: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: 4rem;
+}
+
+.backToTop:hover {
+  color: #1c454a;
+  text-decoration: none;
 }
 
 header {
@@ -381,7 +400,20 @@ header nav ul li:first-child {
 .arrowDown {
   margin-top: 12rem;
   font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
+}
+
+@media (min-width: 900px) {
+  .arrowDown {
+    margin-top: 20rem;
+  }
+}
+
+.arrowDown a {
   color: #e3492b;
+}
+
+.arrowDown a:hover {
+  color: #1c454a;
 }
 
 .bounce {
@@ -475,6 +507,11 @@ header nav ul li:first-child {
     margin-top: 0;
     margin-left: 4rem;
   }
+}
+
+.about .aboutLinks {
+  text-align: center;
+  margin-top: 5rem;
 }
 
 .skillsIcons {
@@ -577,6 +614,7 @@ header nav ul li:first-child {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+    margin-left: 0;
   }
 }
 
@@ -586,12 +624,14 @@ header nav ul li:first-child {
         -ms-flex-order: 2;
             order: 2;
     margin-left: 4rem;
+    margin-right: 0;
   }
 }
 
 @media (min-width: 900px) {
   .projectList li:nth-child(odd) .projectProfile {
     margin-left: 4rem;
+    margin-right: 0;
   }
 }
 
@@ -637,9 +677,7 @@ header nav ul li:first-child {
   }
 }
 
-.linkButton:hover,
-.linkButton :focus, button:hover,
-button :focus {
+.linkButton:hover, .linkButton:focus, button:hover, button:focus {
   color: #1c454a;
   background-color: #f7ae2e;
 }
@@ -844,4 +882,5 @@ footer {
 
 footer p {
   font-size: 1.4rem;
+  margin: 0;
 }

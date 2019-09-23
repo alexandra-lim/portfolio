@@ -79,9 +79,20 @@ header nav ul {
 .arrowDown {
 	margin-top: 12rem;
 	font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
-	color: $secondaryColour;
+
+	@include forSize(smallDesktop) {
+		margin-top: 20rem;
+	}
+
+	a {
+		color: $secondaryColour;
+		&:hover {
+			color: $textColour;
+		}
+	}
 }
 
+// arrow animation
 .bounce {
 	-moz-animation: bounce 3s infinite;
 	-webkit-animation: bounce 3s infinite;
