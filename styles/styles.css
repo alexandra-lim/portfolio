@@ -276,8 +276,6 @@ img {
   color: #e3492b;
   padding: 1% 1.5%;
   display: none;
-  -webkit-transition: all 0.3s linear;
-  transition: all 0.3s linear;
   font-size: 4rem;
 }
 
@@ -398,8 +396,14 @@ header nav ul li:first-child {
 }
 
 .arrowDown {
-  margin-top: 12rem;
+  margin-top: 8rem;
   font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
+}
+
+@media (min-width: 700px) {
+  .arrowDown {
+    margin-top: 12rem;
+  }
 }
 
 @media (min-width: 900px) {
@@ -542,6 +546,12 @@ header nav ul li:first-child {
   .skillsIcons li {
     width: calc(100% / 3);
     margin-top: 4rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .skillsIcons li {
+    width: calc(100% / 4);
   }
 }
 

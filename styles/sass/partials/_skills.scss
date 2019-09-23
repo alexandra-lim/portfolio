@@ -14,8 +14,11 @@
 			margin-top: 4rem;
 		}
 
+		@include forSize(smallDesktop) {
+			width: calc(100% / 4);
+		}
+
 		.skillIcon {
-			// font-size: 4rem;
 			display: inline-block;
 			font-size: calc(4rem + (50 - 40) * ((100vw - 320px) / (1600 - 320)));
 		}

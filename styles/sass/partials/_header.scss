@@ -77,8 +77,12 @@ header nav ul {
 
 // arrow down
 .arrowDown {
-	margin-top: 12rem;
+	margin-top: 8rem;
 	font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
+
+	@include forSize(portraitTablet) {
+		margin-top: 12rem;
+	}
 
 	@include forSize(smallDesktop) {
 		margin-top: 20rem;
