@@ -1,32 +1,35 @@
-
-
 // main
 
 // about me
 
-.profilePic {
-	position: relative;
-
-	img {
-		width: 25rem;
-		height: 25rem;
-		object-fit: cover;
+.profile {
+	@include forSize(smallDesktop) {
+		@include flex (row, space-between);
 	}
 }
 
-.profilePic::after {
-	content: "";
-	@include imageBorder("../assets/picborder.jpg");
-	width: 23rem;
-	height: 23rem;
-	position: absolute;
-	top: 2rem;
-	left: 2rem;
-	z-index: -1;
+.profilePic {
+
+	@include forSize(smallDesktop) {
+		width: 40%;
+		align-self: center;
+	}
+
+	img {
+		width: calc(35rem + (400 - 350) * ((100vw - 320px) / (1600 - 320)));
+		object-fit: cover;
+		margin: 0 auto;
+		@include imageBorder("../assets/picborder.jpg");
+	}
 }
 
-.about .profile {
-	margin-top: 5rem;
+.about .profileDesc {
+	margin-top: 3rem;
 	text-align: left;
-}
 
+	@include forSize(smallDesktop) {
+		width: calc(60% - 4rem);
+		margin-top: 0;
+		margin-left: 4rem;
+	}
+}

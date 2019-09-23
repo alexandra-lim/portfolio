@@ -33,15 +33,17 @@
 					</ul>
 				</nav>
 
-				<div class="headerText">
-					<h1>Alexandra Lim</h1>
-					<h2>Front-End Web Developer</h2>
-				</div>
-
-				<figure class="arrowDown">
-					<span class="sr-only">Scroll down to see more content</span>
-					<i class="fas fa-angle-double-down"></i>
-				</figure>
+				<section class="headerTextArrowDown">
+					<div class="headerText">
+						<h1>Alexandra Lim</h1>
+						<h2>Front-End Web Developer</h2>
+					</div>
+	
+					<figure class="arrowDown bounce">
+						<span class="sr-only">Scroll down to see more content</span>
+						<i class="fas fa-angle-double-down"></i>
+					</figure>
+				</section>
 			</header>
 
 			<!-- main -->
@@ -50,33 +52,35 @@
 				<section class="about" id="about">
 					<h3>Hi, I'm Alex!</h3>
 
-					<figure class="profilePic">
-						<img
-							src="assets/alexlim.jpg"
-							alt="Alexandra Lim's profile picture"
-						/>
-					</figure>
-
 					<div class="profile">
-						<p>
-							I'm a front-end web developer based in Toronto,
-							Canada, and a recent graduate of Juno College of
-							Technology (formerly HackerYou College of
-							Technology).
-						</p>
-
-						<p>
-							I'm a solutions-focused creative who enjoys a good
-							challenge. As a former pastry chef and café manager,
-							I'm resourceful, collaborative, and am passionate
-							about user experience.
-						</p>
-
-						<p>
-							In my spare time, I enjoy reading, knitting, playing
-							with my cat Sherlock, and trying new restaurants and
-							cafés.
-						</p>
+						<figure class="profilePic">
+							<img
+								src="assets/alexlim.jpg"
+								alt="Alexandra Lim's profile picture"
+							/>
+						</figure>
+	
+						<div class="profileDesc">
+							<p>
+								I'm a front-end web developer based in Toronto,
+								Canada, and a recent graduate of Juno College of
+								Technology (formerly HackerYou College of
+								Technology)'s Web Development Immersive Certificate program.
+							</p>
+	
+							<p>
+								I'm a solutions-focused creative who enjoys a good
+								challenge. As a former pastry chef and café manager,
+								I'm resourceful, collaborative, and am passionate
+								about user experience.
+							</p>
+	
+							<p>
+								In my spare time, I enjoy reading, knitting, playing
+								with my cat Sherlock, and checking out new restaurants and
+								cafés.
+							</p>
+						</div>
 					</div>
 				</section>
 
@@ -152,7 +156,7 @@
 						<li>
 							<i
 								class="skillIcon fas fa-terminal"
-								aria-label="Terminal icon"
+								aria-label="Command line icon"
 							></i>
 							<p>Command Line</p>
 						</li>
@@ -186,7 +190,7 @@
 									alt="Screenshot of thankfull: a gratitude journal app"
 								/>
 							</figure>
-							<div class="projectDesc">
+							<div class="projectProfile">
 								<h4>thankfull: a gratitude journal</h4>
 								<p class="skillsUsed">
 									React, Firebase, REST API
@@ -222,7 +226,7 @@
 									alt="Screenshot of Not So Trivial Pursuit game"
 								/>
 							</figure>
-							<div class="projectDesc">
+							<div class="projectProfile">
 								<h4>Not So Trivial Pursuit</h4>
 								<p class="skillsUsed">
 									React, Firebase, REST API, Group Programming
@@ -244,7 +248,7 @@
 										target="_blank"
 										>Puja Neupane</a
 									>
-									based on the client brief provided.
+									based on a client brief provided.
 								</p>
 
 								<p class="projectDesc">
@@ -262,7 +266,7 @@
                                         target="_blank"
                                         >Live</a
                                     >
-                                    <a href="" class="linkButton" target="_blank"
+                                    <a href="https://github.com/notSoTrivialPursuit/notSoTrivialPursuit" class="linkButton" target="_blank"
                                         >Github</a
                                     >
                                 </div>
@@ -275,7 +279,7 @@
 									alt="Screenshot of Ask Ron Swanson advice app"
 								/>
 							</figure>
-							<div>
+							<div class="projectProfile">
 								<h4>Ask Ron Swanson</h4>
 								<p class="skillsUsed">
 									jQuery, REST API, Pair Programming
@@ -298,7 +302,7 @@
                                         target="_blank"
                                         >Live</a
                                     >
-                                    <a href="" class="linkButton" target="_blank"
+                                    <a href="https://github.com/lilSebastianIndustries/askRonSwanson" class="linkButton" target="_blank"
                                         >Github</a
                                     >
                                 </div>
@@ -311,118 +315,127 @@
 									alt="Screenshot of Sanctuary Helpers PSD conversion"
 								/>
 							</figure>
-							<h4>Sanctuary Helpers</h4>
-							<p class="skillsUsed">
-								HTML, Sass, Responsive Design
-							</p>
-							<p class="projectDesc">
-								Sanctuary Helpers is a multi-page PSD conversion
-								using HTML, Sass and Flexbox. It is responsive
-								across all devices and browsers.
-                            </p>
-                            <div class="projectLinks">
-                                <a
-                                    href="https://sanctuaryhelpers.alexandralim.dev/"
-                                    class="linkButton"
-                                    target="_blank"
-                                    >Live</a
-                                >
-                                <a
-                                    href="https://github.com/alexandra-lim/sanctuaryHelpers"
-                                    class="linkButton"
-                                    target="_blank"
-                                    >Github</a
-                                >
-                            </div>
+							<div class="projectProfile">
+
+								<h4>Sanctuary Helpers</h4>
+								<p class="skillsUsed">
+									HTML, Sass, Responsive Design
+								</p>
+								<p class="projectDesc">
+									Sanctuary Helpers is a fully responsive, multi-page PSD conversion
+									using HTML, Sass and Flexbox.
+								</p>
+								<div class="projectLinks">
+									<a
+										href="https://alexandralim.dev/sanctuaryhelpers/"
+										class="linkButton"
+										target="_blank"
+										>Live</a
+									>
+									<a
+										href="https://github.com/alexandra-lim/sanctuaryHelpers"
+										class="linkButton"
+										target="_blank"
+										>Github</a
+									>
+								</div>
+							</div>
 						</li>
 					</ul>
 				</section>
 
 				<!-- contact -->
 				<section class="contact" id="contact">
-					<h3>Say hello!</h3>
+					<h3>Say Hello!</h3>
+					
+					<div class="emailMe">
+						<p>If you're interested in working together, would like to see my resume, or just want to say hi, please drop me a line!</p>
+						<p>
+							Email me at
+							<a href="mailto:hello@alexandralim.dev"
+								>hello[at]alexandralim.dev</a
+							>
+							or get in touch using the form below.
+						</p>
+					</div>
 
-					<p>
-						Email me at
-						<a href="mailto:hello@alexandralim.dev"
-							>hello[at]alexandralim.dev</a
-						>
-						or get in touch using the form below!
-					</p>
-
-                    <form action="https://formspree.io/hello@alexandralim.dev" method="POST" />
-                        <div class="field">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Name" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="email">Email</label>
-                            <input type="text" id="email" name="email" placeholder="yourname@email.com" required />
-                        </div>
-
-                        <div class="field">
-                            <label for="message">Message</label>
-                            <textarea
-                            id="message"
-                            name="message"
-                            cols="30"
-                            rows="5"
-                            placeholder="Hi Alex!"
-                            required
-                            ></textarea>
-                        </div>
-
-						<div class="submitButton">
-							<button>Let's Talk</button>
+					<div class="formAndSocialMedia">
+						<form action="https://formspree.io/hello@alexandralim.dev" method="POST" />
+							<div class="field">
+								<label for="name">Name</label>
+								<input type="text" id="name" name="name" placeholder="Name"  />
+							</div>
+	
+							<div class="field">
+								<label for="email">Email</label>
+								<input type="text" id="email" name="email" placeholder="yourname@email.com"  />
+							</div>
+	
+							<div class="field">
+								<label for="message">Message</label>
+								<textarea
+								id="message"
+								name="message"
+								cols="30"
+								rows="5"
+								placeholder="Hi Alex!"
+								
+								></textarea>
+							</div>
+	
+							<div class="submitButton">
+								<button>Let's Talk!</button>
+							</div>
+						</form>
+	
+						<div class="socialMedia">
+							<ul class="socialIcons">
+								<li>
+									<a
+										href="https://github.com/alexandra-lim/"
+										target="_blank"
+										aria-label="Go to Alex's Github page"
+									>
+										<i
+											class="socialIcon devicon-github-plain"
+										></i>
+										<p class="socialHandle">@alexandra-lim</p>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://www.linkedin.com/in/alexandra-lim/"
+										target="_blank"
+										aria-label="Go to Alex's LinkedIn page"
+									>
+										<i
+											class="socialIcon fab fa-linkedin-in"
+										></i>
+										<p class="socialHandle">@alexandra-lim</p>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://twitter.com/alexandra_lim"
+										target="_blank"
+										aria-label="Visit Alex's Twitter page"
+									>
+										<i class="socialIcon fab fa-twitter"></i>
+										<p class="socialHandle">@alexandra_lim</p>
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://medium.com/@alexandra.lim"
+										target="_blank"
+										aria-label="Visit Alex's Medium profile"
+									>
+										<i class="socialIcon fab fa-medium-m"></i>
+										<p class="socialHandle">@alexandra.lim</p>
+									</a>
+								</li>
+							</ul>
 						</div>
-					</form>
-
-					<div class="socialMedia">
-						<ul class="socialIcons">
-							<li>
-								<a
-									href="https://github.com/alexandra-lim/"
-									target="_blank"
-									aria-label="Go to Alex's Github page"
-								>
-									<i
-										class="socialIcon devicon-github-plain"
-									></i>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://www.linkedin.com/in/alexandra-lim/"
-									target="_blank"
-									aria-label="Go to Alex's LinkedIn page"
-								>
-									<i
-										class="socialIcon fab fa-linkedin-in"
-									></i>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://twitter.com/alexandra_lim"
-									target="_blank"
-									aria-label="Visit Alex's Twitter page"
-								>
-									<i
-										class="socialIcon devicon-twitter-plain"
-									></i>
-								</a>
-							</li>
-							<li>
-								<a
-									href="https://medium.com/@alexandra.lim"
-									target="_blank"
-									aria-label="Visit Alex's Medium profile"
-								>
-									<i class="socialIcon fab fa-medium-m"></i>
-								</a>
-							</li>
-						</ul>
 					</div>
 				</section>
 			</main>
@@ -433,4 +446,8 @@
 			<p>Developed by Alexandra Lim, 2019</p>
 		</footer>
 	</body>
+
+	<!-- js files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="scripts/script.js"></script>
 </html>

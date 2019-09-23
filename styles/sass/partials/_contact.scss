@@ -1,20 +1,41 @@
 // contact me!
 
-// .contact {
-//     p {
-//         text-align: center;
-//     }
-// }
+.emailMe {
+    @include forSize(portraitTablet) {
+        text-align: center;
+    }
+}
 
+.formAndSocialMedia {
+    @include forSize(smallDesktop) {
+        @include flex (row, space-between);
+        margin-bottom: 5rem;
+    }
+}
 
 form {
     margin: 0 auto;
     margin-top: 3rem;
-    // width: 90%;
+
+    @include forSize(smallDesktop) {
+        width: 60%;
+    }
 }
 
-label, input {
-    margin-bottom: 1rem;
+.field {
+    position: relative;
+}
+
+label {
+    position: absolute;
+    top: -1.2rem;
+    background: $background;
+    margin-left: 1rem;
+    padding: 0 0.5rem;
+}
+
+input {
+    margin-bottom: 3rem;
 }
 
 input,
@@ -22,13 +43,21 @@ textarea {
     border: 1px solid $textColour;
     background: $background;
     width: 100%;
+    padding: 1.5rem 0.75rem 1rem 0.75rem;
+
+    @include forSize(smallDesktop) {
+        padding: 2rem 0.75rem 1rem 0.75rem;
+    }
+
     &::placeholder {
         color: $textColour;
+        font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
     }
 }
 
 textarea {
-	resize: none;
+    resize: none;
+    height: 20rem;
 }
 
 .submitButton {
@@ -36,14 +65,34 @@ textarea {
     text-align: center;
     button {
         border: none;
+        font-weight: 700;
     }
 }
 
 .socialMedia {
-    margin-top: 3rem;
+    margin: 4rem 0;
+
+    @include forSize(smallDesktop) {
+        width: 30%;
+    }
+
     .socialIcons {
         @include removeListStyles;
         @include flex (row, space-around);
-        font-size: 2rem;
+        font-size: calc(2rem + (28 - 20) * ((100vw - 320px) / (1600 - 320)));
+
+        @include forSize(smallDesktop) {
+        @include flex(column, space-between);
+        }
+
+        .socialHandle {
+            display: none;
+            margin-left: 1rem;
+
+            @include forSize(smallDesktop) {
+                display: inline-block;
+                font-weight: 400;
+            }
+        }
     }
 }

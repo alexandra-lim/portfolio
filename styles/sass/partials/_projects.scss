@@ -11,49 +11,93 @@
 
 	li {
 		margin-bottom: 5rem;
+
+		@include forSize(smallDesktop) {
+			@include flex (row, space-between);
+			margin-top: 8rem;
+
+			h4 {
+				margin-top: 0;
+			}
+		}
 	}
 
 	figure {
 		margin: 0 auto;
 		position: relative;
+
+		@include forSize(smallDesktop) {
+			width: calc(50% - 4rem);
+			align-self: center;
+		}
 	}
 }
 
-.projectList {
+.projectList li:nth-child(even) {
+	@include forSize(smallDesktop) {
+		figure {
+			order: 2;
+			margin-left: 4rem;
+		}
+	}
+}
+
+.projectList li:nth-child(odd) {
+	@include forSize(smallDesktop) {
+		.projectProfile {
+			margin-left: 4rem;
+		}
+	}
+}
+
+.projectProfile {
+	@include forSize(smallDesktop) {
+		width: calc(50% - 4rem);
+	}
+
 	.skillsUsed {
 		font-style: italic;
-        margin-top: 0;
+		margin-top: 0;
+		margin-bottom: 2rem;
         text-align: center;
 	}
 
 	.projectDesc {
-		margin-bottom: 3.5rem;
+		margin-top: 0;
+		margin-bottom: 2rem;
 	}
 }
 
 .projectLinks {
-    text-align: center;
+	text-align: center;
+	margin-top: 4rem;
 }
 
 .linkButton, button {
-		margin-right: 1rem;
-		padding: 1rem 2rem;
-		background-color: $secondaryColour;
-		font-size: 1.6rem;
-		font-weight: 700;
-		color: $background;
-		border-radius: 1rem;
-		transition: 0.3s all linear;
-		&:hover,
-		:focus {
-			color: $textColour;
-			background-color: $accentColour;
-		}
+	margin-right: 1rem;
+	padding: 1rem 2rem;
+	background-color: $secondaryColour;
+	font-size: 1.6rem;
+	font-family: $headingFont;
+	color: $background;
+	border-radius: 1rem;
+	transition: 0.3s all linear;
+
+	@include forSize(smallDesktop) {
+		padding: 1.5rem 3rem;
+		font-size: 2rem;
 	}
 
-	.linkButton:last-child {
-		margin-right: 0;
+	&:hover,
+	:focus {
+		color: $textColour;
+		background-color: $accentColour;
 	}
+}
+	
+.linkButton:last-child {
+	margin-right: 0;
+}
 
 // borders for project screenshots
 .thankfull {
