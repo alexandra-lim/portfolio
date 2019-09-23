@@ -6,6 +6,91 @@ header {
 	height: 100vh;
 }
 
+// hamburger stylez
+.hamburger,
+.exitMenu {
+	display: block;
+
+	@include forSize(smallDesktop) {
+		display: none;
+	}
+}
+
+.hamburger {
+	text-align: left;
+	font-size: 3rem;
+	margin-top: 1rem;
+	color: $secondaryColour;
+	transition: 0.3s all linear;
+
+	&:hover {
+		color: $textColour;
+	}
+
+	@include forSize(mobileTablet) {
+		position: relative;
+		left: -2rem;
+	}
+}
+
+.exitMenu {
+	text-align: left;
+	margin-left: 2rem;
+	font-size: 3rem;
+	color: $secondaryColour;
+	transition: 0.3s all linear;
+	&:hover {
+		color: $textColour;
+	}
+}
+
+.show.menu {
+	display: block;
+}
+
+// nav
+
+header nav {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $background;
+
+	@include forSize(smallDesktop) {
+		display: block;
+		position: static;
+	}
+
+	ul {
+		@include flex(column, space-between);
+		padding-left: 0;
+
+		@include forSize(smallDesktop) {
+			@include removeListStyles;
+			@include flex(row, space-between);
+			margin-top: 2rem;
+		}
+
+		li {
+			font-size: 2rem;
+			text-transform: uppercase;
+			margin-bottom: 2rem;
+			@include removeListStyles;
+
+			@include forSize(smallDesktop) {
+				width: 20%;
+				text-align: center;
+				font-size: calc(
+					1.2rem + (20 - 12) * ((100vw - 320px) / (1600 - 320))
+				);
+			}
+		}
+	}
+}
+
 .headerTextArrowDown {
 	text-transform: lowercase;
 	@include flex(column, center);
@@ -14,7 +99,6 @@ header {
 .headerText {
 	justify-content: center;
 	align-content: center;
-	margin-top: 8rem;
 
 	h1 {
 		font-size: calc(5.2rem + (64 - 52) * ((100vw - 320px) / (1600 - 320)));
@@ -33,8 +117,8 @@ header {
 	position: absolute;
 	width: 200px;
 	height: 200px;
-	top: 187px;
-	left: 49px;
+	top: 141px;
+	left: 52px;
 	z-index: -10;
 
 	@include forSize(smallDesktop) {
@@ -48,45 +132,10 @@ header {
 	}
 }
 
-// nav
-
-header nav ul {
-	@include removeListStyles;
-	@include flex(row, space-between);
-	margin-top: 2rem;
-
-	li {
-		width: 25%;
-		text-align: center;
-		text-transform: uppercase;
-		font-size: calc(1.2rem + (20 - 12) * ((100vw - 320px) / (1600 - 320)));
-
-		@include forSize(portraitTablet) {
-			width: 20%;
-		}
-	}
-
-	li:first-child {
-		display: none;
-
-		@include forSize(portraitTablet) {
-			display: inline-block;
-		}
-	}
-}
-
 // arrow down
 .arrowDown {
-	margin-top: 8rem;
+	margin-top: calc(10rem + (250 - 100) * ((100vw - 320px) / (1600 - 320)));
 	font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
-
-	@include forSize(portraitTablet) {
-		margin-top: 12rem;
-	}
-
-	@include forSize(smallDesktop) {
-		margin-top: 20rem;
-	}
 
 	a {
 		color: $secondaryColour;

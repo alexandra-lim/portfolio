@@ -276,7 +276,13 @@ img {
   color: #e3492b;
   padding: 1% 1.5%;
   display: none;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+@media (min-width: 900px) {
+  .backToTop {
+    font-size: 4rem;
+  }
 }
 
 .backToTop:hover {
@@ -288,6 +294,126 @@ header {
   text-align: center;
   color: #1c454a;
   height: 100vh;
+}
+
+.hamburger,
+.exitMenu {
+  display: block;
+}
+
+@media (min-width: 900px) {
+  .hamburger,
+  .exitMenu {
+    display: none;
+  }
+}
+
+.hamburger {
+  text-align: left;
+  font-size: 3rem;
+  margin-top: 1rem;
+  color: #e3492b;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+
+.hamburger:hover {
+  color: #1c454a;
+}
+
+@media (min-width: 480px) {
+  .hamburger {
+    position: relative;
+    left: -2rem;
+  }
+}
+
+.exitMenu {
+  text-align: left;
+  margin-left: 2rem;
+  font-size: 3rem;
+  color: #e3492b;
+  -webkit-transition: 0.3s all linear;
+  transition: 0.3s all linear;
+}
+
+.exitMenu:hover {
+  color: #1c454a;
+}
+
+.show.menu {
+  display: block;
+}
+
+header nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f9f7f0;
+}
+
+@media (min-width: 900px) {
+  header nav {
+    display: block;
+    position: static;
+  }
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 0;
+}
+
+@media (min-width: 900px) {
+  header nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 2rem;
+  }
+}
+
+header nav ul li {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+@media (min-width: 900px) {
+  header nav ul li {
+    width: 20%;
+    text-align: center;
+    font-size: calc( 1.2rem + (20 - 12) * ((100vw - 320px) / (1600 - 320)));
+  }
 }
 
 .headerTextArrowDown {
@@ -312,7 +438,6 @@ header {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin-top: 8rem;
 }
 
 .headerText h1 {
@@ -334,8 +459,8 @@ header {
   position: absolute;
   width: 200px;
   height: 200px;
-  top: 187px;
-  left: 49px;
+  top: 141px;
+  left: 52px;
   z-index: -10;
 }
 
@@ -353,63 +478,9 @@ header {
   }
 }
 
-header nav ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 2rem;
-}
-
-header nav ul li {
-  width: 25%;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: calc(1.2rem + (20 - 12) * ((100vw - 320px) / (1600 - 320)));
-}
-
-@media (min-width: 700px) {
-  header nav ul li {
-    width: 20%;
-  }
-}
-
-header nav ul li:first-child {
-  display: none;
-}
-
-@media (min-width: 700px) {
-  header nav ul li:first-child {
-    display: inline-block;
-  }
-}
-
 .arrowDown {
-  margin-top: 8rem;
+  margin-top: calc(10rem + (250 - 100) * ((100vw - 320px) / (1600 - 320)));
   font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
-}
-
-@media (min-width: 700px) {
-  .arrowDown {
-    margin-top: 12rem;
-  }
-}
-
-@media (min-width: 900px) {
-  .arrowDown {
-    margin-top: 20rem;
-  }
 }
 
 .arrowDown a {
@@ -781,6 +852,7 @@ textarea {
   background: #f9f7f0;
   width: 100%;
   padding: 1.5rem 0.75rem 1rem 0.75rem;
+  color: #1c454a;
 }
 
 @media (min-width: 900px) {
@@ -812,6 +884,11 @@ input::placeholder,
 textarea::placeholder {
   color: #1c454a;
   font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+}
+
+input:focus,
+textarea:focus {
+  border: 1px dashed #1c454a;
 }
 
 textarea {
