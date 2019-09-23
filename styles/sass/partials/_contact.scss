@@ -44,6 +44,7 @@ textarea {
     background: $background;
     width: 100%;
     padding: 1.5rem 0.75rem 1rem 0.75rem;
+    color: $textColour;
 
     @include forSize(smallDesktop) {
         padding: 2rem 0.75rem 1rem 0.75rem;
@@ -52,6 +53,10 @@ textarea {
     &::placeholder {
         color: $textColour;
         font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+    }
+
+    &:focus {
+        border: 1px dashed $textColour;
     }
 }
 
