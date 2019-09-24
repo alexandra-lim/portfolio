@@ -43,8 +43,9 @@ section {
 
 // section headings
 h3 {
-	font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
+	font-size: calc(3.6rem + (60 - 36) * ((100vw - 320px) / (1600 - 320)));
 	color: $secondaryColour;
+	padding-top: 5rem;
 }
 
 // section text
@@ -86,8 +87,8 @@ img {
 // scroll to top
 .backToTop {
 	position: fixed;
-	bottom: 0;
-	right: 0;
+	bottom: 1rem;
+	right: 1.3rem;
 	color: $secondaryColour;
 	padding: 1% 1.5%;
 	display: none;

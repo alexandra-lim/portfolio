@@ -19,17 +19,20 @@ header {
 .hamburger {
 	text-align: left;
 	font-size: 3rem;
-	margin-top: 1rem;
+	margin: 0;
 	color: $secondaryColour;
 	transition: 0.3s all linear;
+	position: fixed;
+	top: 3rem;
+	left: 2.75rem;
+
+	.fa-bars {
+		position: absolute;
+		top: -10px;
+	}
 
 	&:hover {
 		color: $textColour;
-	}
-
-	@include forSize(mobileTablet) {
-		position: relative;
-		left: -2rem;
 	}
 }
 
@@ -92,6 +95,7 @@ header nav {
 }
 
 .headerTextArrowDown {
+	margin-top: 10.5rem;
 	text-transform: lowercase;
 	@include flex(column, center);
 }
@@ -134,7 +138,7 @@ header nav {
 
 // arrow down
 .arrowDown {
-	margin-top: calc(10rem + (250 - 100) * ((100vw - 320px) / (1600 - 320)));
+	margin-top: calc(9rem + (200 - 90) * ((100vw - 320px) / (1600 - 320)));
 	font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
 
 	a {

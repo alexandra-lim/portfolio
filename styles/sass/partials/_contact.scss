@@ -6,13 +6,6 @@
     }
 }
 
-// .formAndSocialMedia {
-//     @include forSize(smallDesktop) {
-//         @include flex (row, space-between);
-//         margin-bottom: 5rem;
-//     }
-// }
-
 form {
     margin: 0 auto;
     margin-top: 3rem;
@@ -95,10 +88,6 @@ textarea {
         @include removeListStyles;
         @include flex (row, space-around);
         font-size: calc(2rem + (28 - 20) * ((100vw - 320px) / (1600 - 320)));
-
-        // @include forSize(smallDesktop) {
-        // @include flex(column, space-between);
-        // }
 
         .socialHandle {
             display: none;

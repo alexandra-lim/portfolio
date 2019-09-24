@@ -14,6 +14,7 @@ $(document).ready(function() {
 			800,
 			"linear"
 		);
+		$(".menu").removeClass("show");
 	});
 
 	// scroll to top arrow visible after 100vh
@@ -38,7 +39,7 @@ $(document).ready(function() {
 	});
 
 	$(".exitMenu").on("click", function() {
-		$(".menu").toggleClass("show");
+		$(".menu").removeClass("show");
 		$(".arrowDown").show();
 	});
 });

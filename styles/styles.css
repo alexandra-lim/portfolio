@@ -231,8 +231,9 @@ section {
 }
 
 h3 {
-  font-size: calc(3rem + (48 - 30) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(3.6rem + (60 - 36) * ((100vw - 320px) / (1600 - 320)));
   color: #e3492b;
+  padding-top: 5rem;
 }
 
 p,
@@ -271,8 +272,8 @@ img {
 
 .backToTop {
   position: fixed;
-  bottom: 0;
-  right: 0;
+  bottom: 1rem;
+  right: 1.3rem;
   color: #e3492b;
   padding: 1% 1.5%;
   display: none;
@@ -311,21 +312,22 @@ header {
 .hamburger {
   text-align: left;
   font-size: 3rem;
-  margin-top: 1rem;
+  margin: 0;
   color: #e3492b;
   -webkit-transition: 0.3s all linear;
   transition: 0.3s all linear;
+  position: fixed;
+  top: 3rem;
+  left: 2.75rem;
+}
+
+.hamburger .fa-bars {
+  position: absolute;
+  top: -10px;
 }
 
 .hamburger:hover {
   color: #1c454a;
-}
-
-@media (min-width: 480px) {
-  .hamburger {
-    position: relative;
-    left: -2rem;
-  }
 }
 
 .exitMenu {
@@ -417,6 +419,7 @@ header nav ul li {
 }
 
 .headerTextArrowDown {
+  margin-top: 10.5rem;
   text-transform: lowercase;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -452,6 +455,7 @@ header nav ul li {
 
 .headerText::after {
   content: "";
+  border: 10px solid #f7ae2e;
   border: 10px solid transparent;
   -o-border-image: url("../assets/yellowdoor.jpg");
      border-image: url("../assets/yellowdoor.jpg");
@@ -479,7 +483,7 @@ header nav ul li {
 }
 
 .arrowDown {
-  margin-top: calc(10rem + (250 - 100) * ((100vw - 320px) / (1600 - 320)));
+  margin-top: calc(9rem + (200 - 90) * ((100vw - 320px) / (1600 - 320)));
   font-size: calc(3rem + (40 - 30) * ((100vw - 320px) / (1600 - 320)));
 }
 
@@ -565,6 +569,7 @@ header nav ul li {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 0 auto;
+  border: 10px solid #f7ae2e;
   border: 10px solid transparent;
   -o-border-image: url("../assets/picborder.jpg");
      border-image: url("../assets/picborder.jpg");
@@ -740,7 +745,6 @@ header nav ul li {
   padding: 1rem 2rem;
   background-color: #e3492b;
   font-size: 1.6rem;
-  font-family: "Playfair Display", serif;
   color: #f9f7f0;
   border-radius: 1rem;
   -webkit-transition: 0.3s all linear;
@@ -764,6 +768,7 @@ header nav ul li {
 }
 
 .thankfull {
+  border: 10px solid #f7ae2e;
   border: 10px solid transparent;
   -o-border-image: url("../assets/projects/thankfullborder.jpg");
      border-image: url("../assets/projects/thankfullborder.jpg");
@@ -771,6 +776,7 @@ header nav ul li {
 }
 
 .trivial {
+  border: 10px solid #f7ae2e;
   border: 10px solid transparent;
   -o-border-image: url("../assets/projects/trivialborder.jpg");
      border-image: url("../assets/projects/trivialborder.jpg");
@@ -778,6 +784,7 @@ header nav ul li {
 }
 
 .askRon {
+  border: 10px solid #f7ae2e;
   border: 10px solid transparent;
   -o-border-image: url("../assets/projects/askronborder.jpg");
      border-image: url("../assets/projects/askronborder.jpg");
@@ -785,6 +792,7 @@ header nav ul li {
 }
 
 .sanctuary {
+  border: 10px solid #f7ae2e;
   border: 10px solid transparent;
   -o-border-image: url("../assets/projects/sanctuaryborder.jpg");
      border-image: url("../assets/projects/sanctuaryborder.jpg");

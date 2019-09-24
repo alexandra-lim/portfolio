@@ -46,6 +46,7 @@ $secondaryColour: #e3492b;
 
 // image border
 @mixin imageBorder($imageLink) {
+	border: 10px solid $accentColour;
 	border: 10px solid transparent;
 	border-image: url($imageLink);
     border-image-slice: 20;
