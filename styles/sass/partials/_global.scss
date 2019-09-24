@@ -46,6 +46,10 @@ h3 {
 	font-size: calc(3.6rem + (60 - 36) * ((100vw - 320px) / (1600 - 320)));
 	color: $secondaryColour;
 	padding-top: 5rem;
+
+	@include forSize(desktopBigger) {
+		padding-top: 10rem;
+	}
 }
 
 // section text

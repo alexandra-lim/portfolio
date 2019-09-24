@@ -236,6 +236,12 @@ h3 {
   padding-top: 5rem;
 }
 
+@media (min-width: 1200px) {
+  h3 {
+    padding-top: 10rem;
+  }
+}
+
 p,
 form {
   font-size: calc(1.6rem + (22 - 16) * ((100vw - 320px) / (1600 - 320)));
