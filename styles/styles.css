@@ -441,7 +441,7 @@ header nav ul li {
 }
 
 .headerText h1 {
-  font-size: calc(5.2rem + (64 - 52) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(5.2rem + (80 - 52) * ((100vw - 320px) / (1600 - 320)));
   margin-bottom: 0;
 }
 
@@ -582,11 +582,6 @@ header nav ul li {
     margin-top: 0;
     margin-left: 4rem;
   }
-}
-
-.about .aboutLinks {
-  text-align: center;
-  margin-top: 5rem;
 }
 
 .skillsIcons {
@@ -732,6 +727,7 @@ header nav ul li {
 .projectProfile .projectDesc {
   margin-top: 0;
   margin-bottom: 2rem;
+  font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
 }
 
 .projectLinks {
@@ -801,33 +797,9 @@ header nav ul li {
   }
 }
 
-@media (min-width: 900px) {
-  .formAndSocialMedia {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-bottom: 5rem;
-  }
-}
-
 form {
   margin: 0 auto;
   margin-top: 3rem;
-}
-
-@media (min-width: 900px) {
-  form {
-    width: 60%;
-  }
 }
 
 .field {
@@ -840,10 +812,6 @@ label {
   background: #f9f7f0;
   margin-left: 1rem;
   padding: 0 0.5rem;
-}
-
-input {
-  margin-bottom: 3rem;
 }
 
 input,
@@ -865,30 +833,57 @@ textarea {
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   color: #1c454a;
-  font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
 }
 
 input:-ms-input-placeholder,
 textarea:-ms-input-placeholder {
   color: #1c454a;
-  font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
 }
 
 input::-ms-input-placeholder,
 textarea::-ms-input-placeholder {
   color: #1c454a;
-  font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
 }
 
 input::placeholder,
 textarea::placeholder {
   color: #1c454a;
-  font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+  font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
 }
 
 input:focus,
 textarea:focus {
   border: 1px dashed #1c454a;
+}
+
+@media (min-width: 900px) {
+  .textInputs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media (min-width: 900px) {
+  .textInput {
+    width: calc(50% - 1rem);
+  }
+}
+
+input {
+  margin-bottom: 3rem;
 }
 
 textarea {
@@ -912,7 +907,9 @@ textarea {
 
 @media (min-width: 900px) {
   .socialMedia {
-    width: 30%;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 6rem;
   }
 }
 
@@ -934,23 +931,6 @@ textarea {
   font-size: calc(2rem + (28 - 20) * ((100vw - 320px) / (1600 - 320)));
 }
 
-@media (min-width: 900px) {
-  .socialMedia .socialIcons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
 .socialMedia .socialIcons .socialHandle {
   display: none;
   margin-left: 1rem;
@@ -965,6 +945,7 @@ textarea {
 
 footer {
   text-align: center;
+  margin-top: 5rem;
 }
 
 footer p {

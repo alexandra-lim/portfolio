@@ -6,20 +6,16 @@
     }
 }
 
-.formAndSocialMedia {
-    @include forSize(smallDesktop) {
-        @include flex (row, space-between);
-        margin-bottom: 5rem;
-    }
-}
+// .formAndSocialMedia {
+//     @include forSize(smallDesktop) {
+//         @include flex (row, space-between);
+//         margin-bottom: 5rem;
+//     }
+// }
 
 form {
     margin: 0 auto;
     margin-top: 3rem;
-
-    @include forSize(smallDesktop) {
-        width: 60%;
-    }
 }
 
 .field {
@@ -32,10 +28,6 @@ label {
     background: $background;
     margin-left: 1rem;
     padding: 0 0.5rem;
-}
-
-input {
-    margin-bottom: 3rem;
 }
 
 input,
@@ -52,12 +44,28 @@ textarea {
 
     &::placeholder {
         color: $textColour;
-        font-size: calc(1.4rem + (18 - 14) * ((100vw - 320px) / (1600 - 320)));
+        font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
     }
 
     &:focus {
         border: 1px dashed $textColour;
     }
+}
+
+.textInputs {
+    @include forSize(smallDesktop) {
+        @include flex(row, space-between);
+    }
+}
+
+.textInput {
+    @include forSize(smallDesktop) {
+        width: calc(50% - 1rem);
+    }
+}
+
+input {
+    margin-bottom: 3rem;
 }
 
 textarea {
@@ -78,7 +86,9 @@ textarea {
     margin: 4rem 0;
 
     @include forSize(smallDesktop) {
-        width: 30%;
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 6rem;
     }
 
     .socialIcons {
@@ -86,9 +96,9 @@ textarea {
         @include flex (row, space-around);
         font-size: calc(2rem + (28 - 20) * ((100vw - 320px) / (1600 - 320)));
 
-        @include forSize(smallDesktop) {
-        @include flex(column, space-between);
-        }
+        // @include forSize(smallDesktop) {
+        // @include flex(column, space-between);
+        // }
 
         .socialHandle {
             display: none;

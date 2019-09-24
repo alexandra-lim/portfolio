@@ -68,6 +68,7 @@
 	.projectDesc {
 		margin-top: 0;
 		margin-bottom: 2rem;
+		font-size: calc(1.6rem + (20 - 16) * ((100vw - 320px) / (1600 - 320)));
 	}
 }
 
