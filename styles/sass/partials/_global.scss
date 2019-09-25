@@ -101,7 +101,7 @@ img {
 	@include forSize(smallDesktop) {
 		font-size: 4rem;
 	}
-	
+
 	&:hover {
 		color: $textColour;
 		text-decoration: none;
