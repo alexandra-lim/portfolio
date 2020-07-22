@@ -25,6 +25,7 @@ header {
 	position: fixed;
 	top: 3rem;
 	left: 2.75rem;
+	z-index: 10;
 
 	.fa-bars {
 		position: absolute;
@@ -49,13 +50,14 @@ header {
 
 .show.menu {
 	display: block;
+	z-index: 20;
 }
 
 // nav
 
 header nav {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;

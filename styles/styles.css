@@ -325,6 +325,7 @@ header {
   position: fixed;
   top: 3rem;
   left: 2.75rem;
+  z-index: 10;
 }
 
 .hamburger .fa-bars {
@@ -351,11 +352,12 @@ header {
 
 .show.menu {
   display: block;
+  z-index: 20;
 }
 
 header nav {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -626,12 +628,6 @@ header nav ul li {
   }
 }
 
-@media (min-width: 900px) {
-  .skillsIcons li {
-    width: calc(100% / 4);
-  }
-}
-
 .skillsIcons li .skillIcon {
   display: inline-block;
   font-size: calc(4rem + (50 - 40) * ((100vw - 320px) / (1600 - 320)));
@@ -833,14 +829,14 @@ textarea {
   border: 1px solid #1c454a;
   background: #f9f7f0;
   width: 100%;
-  padding: 1.5rem 0.75rem 1rem 0.75rem;
+  padding: 1.75rem 0.75rem 1rem 1.5rem;
   color: #1c454a;
 }
 
 @media (min-width: 900px) {
   input,
   textarea {
-    padding: 2rem 0.75rem 1rem 0.75rem;
+    padding: 2.25rem 0.75rem 1rem 1.5rem;
   }
 }
 
